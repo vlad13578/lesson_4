@@ -1,0 +1,406 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+a,
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+img {
+    vertical-align: top;
+}
+html,
+body {
+    height: 100%;
+}
+html {
+    font-size: 16px;
+}
+body {
+    line-height: 1;
+}
+.wrapper {
+    max-width: 700px;
+    margin: 20px auto 0px;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+/* ------------------------------ */
+/* Відступи */
+/* По іншому працюють для рядкового об'єкта*/
+
+/* Внутрішні */
+/*
+padding
+Внутрішній відступ елемента
+У разі зазначення поля у відсотках, значення рахується 
+від ширини батьківського елемента.
+Властивість не успадковується.
+
+padding: з_всіх_сторон;
+padding: зверху праворуч знизу ліворуч;
+padding: зверху_знизу справа_зліва;
+padding: зверху справа_зліва знизу;
+
+*/
+
+/* Зовнішні */
+/*
+margin
+Зовнішній відступ елемента
+У разі зазначення поля у відсотках, значення 
+рахується від ширини батька елемента.
+Властивість не успадковується.
+Значення може бути як позитивним, 
+так і від'ємним числом.
+
+margin: з_всіх_сторон;
+margin: зверху праворуч знизу ліворуч;
+margin: зверху_знизу справа_зліва;
+margin: зверху справа_зліва знизу;
+*/
+
+/*.block {
+    background-color: green;
+
+    color: #fff;
+    font-size: 30px;
+    margin: 50px;
+    padding: 30px;
+}
+.inline {
+    background-color: #794f45;
+    color: #fff;
+    font-size: 30px;
+    width: 500px;
+    padding: 50px;
+    margin: 50px;
+}
+
+.image {
+    width: 50%;
+    padding: 50px;
+    background-color: #000;
+}*/
+
+/*
+.block_2 {
+	background-color: #77608d;
+
+	color: #fff;
+	font-size: 50px;
+	padding: 50px;
+}
+.block_3 {
+	background-color: #794f45;
+	padding: 50px;
+
+	color: #fff;
+	font-size: 50px;
+	padding: 50px;
+}
+*/
+/* НЕ працюють для рядкового об'єкта*/
+/*
+width
+Встановлює ширину блокових тегів і блочно-рядкових
+Властивість не успадковується.
+width:100px;
+width:10%;
+*/
+
+/*.block {
+	width: 500px;
+}*/
+
+/*
+box-sizing
+Застосовується для зміни алгоритму розрахунку ширини 
+і висоти елемента. 
+Властивість успадковується.
+content-box - ґрунтується на стандартах CSS, при цьому 
+властивості width і height задають ширину і висоту контенту
+і не включають у себе значення відступів, полів і меж.
+border-box - Властивості width і height містять у собі 
+значення полів і меж, але не відступів (margin). Ця модель використовується браузером Internet Exporer у режимі несумісності.
+padding-box - Властивості width і height містять у собі
+значення полів, але не відступів (margin) і меж (border). 
+
+*/
+
+/*
+Центрування об'єкта за допомогою margin зі значеннями auto:last-child
+1) Об'єкт має бути блоковим
+2) Об'єкт має бути обмежений за шириною, бути вужчим, ніж батько
+3) margin: 0px auto;
+*/
+
+/*.block {
+    margin: 0px auto;
+}*/
+
+/*
+max-width
+Встановлює максимальну ширину блокових 
+і блочно-рядкових тегів
+
+min-width
+Встановлює мінімальну ширину блокових 
+і блочно-рядкових тегів
+*/
+
+/*.block {
+	max-width: 700px;
+	margin: 0px auto;
+}*/
+
+/*
+height:
+Встановлює висоту блокових і блочно-рядкових тегів
+Властивість не успадковується.
+height:100px;
+height:10%;
+
+min-height
+Властивість не успадковується.
+
+max-height
+Властивість не успадковується.
+*/
+
+/*.block {
+    height: 500px;
+}*/
+
+/*
+overflow 
+Керує відображенням вмісту блочного елемента
+visible - Відображається весь вміст елемента, навіть за межами встановленої висоти та ширини. 
+hidden - Відображається тільки область усередині елемента, решта буде прихована.
+scroll - Завжди додаються смуги прокрутки.
+auto - Смуги прокрутки додаються тільки за потреби.
+*/
+
+/*.block {
+    overflow: hidden;
+}*/
+
+/*
+display:
+Багатоцільова властивість, яка визначає, як елемент повинен бути показаний у документі.
+Властивість не успадковується.
+
+block – елемент показується як блоковий. Застосування цього значення для вбудованих елементів, наприклад тега <span>, змушує його вести подібно до блоків - відбувається перенесення рядків на початку і в кінці вмісту.
+inline - Елемент відображається як інтегрований. Використання блокових тегів, таких як <div> та <p>, автоматично створює перенос і показує вміст цих тегів з нового рядка. Значення inline скасовує цю особливість, тому вміст блокових елементів починається з місця, де закінчився попередній елемент.
+inline - block - Це значення генерує блоковий елемент, який обтікається іншими елементами веб-сторінки подібно до вбудованого елемента. Фактично такий елемент за своєю дією схожий на елементи, що вбудовуються (на зразок тега <img>). При цьому його внутрішня частина форматується як блоковий елемент, а сам елемент як вбудований.
+none - тимчасово видаляє елемент із документа. Займане ним місце не резервується і веб-сторінка формується так, як елемента і не було.
+*/
+
+.block1 {
+    background-color: rgb(83, 241, 35);
+    margin: 0px 0px 10px 0px;
+    padding: 20px;
+    height: 100px;
+    overflow: hidden;
+    width: 500px;
+}
+.block2 {
+    background-color: rgb(54, 168, 235);
+    margin: 0px 0px 10px 0px;
+    padding: 20px;
+    height: 100px;
+    overflow: visible;
+    color: #da3e3e;
+    width: 50%;
+}
+.block3 {
+    background-color: rgb(228, 196, 17);
+    margin: 0px 0px 10px 0px;
+    padding: 20px;
+    height: 100px;
+    overflow: scroll;
+    max-width: 500px;
+}
+
+.block4 {
+    background-color: rgb(231, 34, 142);
+    margin: 0px 0px 10px 0px;
+    padding: 20px;
+    height: 100px;
+    overflow: auto;
+    max-width: 50%;
+}
+.block5 {
+    background-color: rgb(226, 34, 34);
+    margin: 0px 0px 10px 0px;
+    padding: 20px;
+    height: 100px;
+    color: #2ec04e;
+}
+.block6 {
+    background-color: blue;
+    margin: 0px 0px 30px 0px;
+    padding: 20px;
+    height: 100%;
+    display: block;
+}
+.block7 {
+    background-color: rgb(204, 29, 160);
+    margin: 0px 0px 50px 0px;
+    padding: 20px;
+    display: inline;
+}
+.block8 {
+    background-color: rgb(58, 228, 81);
+    margin: 30px 0px 10px 0px;
+    padding: 20px;
+    display: inline-block;
+}
+.span1 {
+    background-color: #100e85;
+    display: block;
+    padding: 20px;
+    margin: 0px 0px 30px 0px;
+    width: 500px;
+}
+.span2 {
+    background-color: #ce6f22;
+    padding: 20px;
+    margin: 0px 0px 20px 0px;
+    width: 50%;
+    display: inline-block;
+}
+.span3 {
+    background-color: #2ec04e;
+    padding: 20px;
+    margin: 30px 0px 20px 0px;
+    display: inline-block;
+    overflow: hidden;
+    height: 50px;
+    max-width: 50%;
+}
+.span4 {
+    background-color: #eeda22;
+    text-align: center;
+    max-width: 500px;
+}
+.span5 {
+    background-color: #c02e5a;
+    text-align: end;
+    display: block;
+}
+.span6 {
+    background-color: #2e8bc0;
+    display: block;
+    margin: 0px 0px 20px 0px;
+}
+.span7 {
+    background-color: #fd0707;
+    display: none;
+}
+.span8 {
+    background-color: #f0d1de;
+    display: block;
+    margin: 0px 0px 20px 0px;
+}
+.img_1 {
+    display: block;
+    margin: 0px auto 10px;
+}
+.img_2 {
+    display: block;
+    margin: 0 0 10px auto;
+}
+.img_3 {
+    display: block;
+    margin: 0px 0px 50px 0px;
+}
+.text {
+    font-size: 30px;
+    text-decoration: underline;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 5px 5px 10px #eeda22;
+}
+.spanblock {
+    display: block;
+    margin: 0px 0px 5px 0px;
+}
+
+.task-div {
+    margin: 0px 0px 20px 0px;
+}
+.task_number {
+    font-size: 30px;
+    color: #c02e5a;
+    margin: 0px 0px 10px 0px;
+}
+
+.text-div {
+    max-width: 200px;
+    max-height: 200px;
+    overflow: auto;
+    background-color: #eeda22;
+    margin: 0px 0px 0px 15px;
+    display: inline-block;
+    padding: 15px;
+}
+.link1 {
+    display: inline-block;
+    margin: 0px 0px 30px 0px;
+}
+
+.p {
+    background-color: #2e8bc0;
+    font-size: 15px;
+    max-width: 100px;
+    margin: 0px 30px 0px 0px;
+    padding: 10px;
+    display: inline-block;
+}
+.div-1 {
+    background-color: #26b177;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 30px;
+	color: rgb(255, 255, 255);
+}
+.div-2 {
+    background-color: #39b8d8;
+    font-size: 20px;
+    text-transform: capitalize;
+    padding: 30px;
+	margin: -100px 0px 0px 0px;
+	color: #fd0707;
+}
+.bottom-span {
+	background-color: #4556f3;
+	font-size: 20px;
+	padding: 20px;
+	text-transform: uppercase;
+	color: #ce6f22;
+	display: block;
+	max-height: 200px;
+	overflow: auto;
+}
+
